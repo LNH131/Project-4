@@ -5,6 +5,7 @@
 :root {
     --primary-color: #000958;
     --secondary-color: #ff5b2e;
+    --background-color: #fffaf5;
 }
 
 html {
@@ -14,7 +15,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
-    background: #fffaf5;
+    background: var(--background-color);
 }
 
 /* Commons */
@@ -48,11 +49,18 @@ button {
     margin-right: auto;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+}
+
 /* Header */
 .header {
     position: sticky;
     top: -18px;
-    padding: 18px 0;
+    z-index: 1;
+    padding-top: 18px;
+    background-color: var(--background-color);
 }
 
 .navbar {
@@ -126,7 +134,7 @@ button {
 
 .images {
     position: relative;
-    width: 52%;
+    width: 609px;
     height: 582px;
 }
 
@@ -137,9 +145,182 @@ button {
 
 .images__first-icon {
     top: 16px;
-    right: 122px;
+    right: 108px;
+}
+
+.images__second-icon {
+    left: 0;
+    bottom: 104px;
+}
+
+.images__first-background {
+    position: absolute;
+    left: 58px;
+    width: 63.7%;
+    height: 488px;
+    background-color: #fe997b;
+    border-radius: 16px;
+    border: 3px solid #fff;
+    overflow: hidden;
+}
+
+.images__first-img {
+    width: 370px;
+    height: 718px;
+    object-fit: cover;
+}
+.images__second-background {
+    position: absolute;
+    bottom: 36px;
+    right: 0;
+    width: 30.5%;
+    height: 244px;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    background: linear-gradient(206deg, #faa7ad 4.68%, #e87f8a 98.09%);
+    box-shadow: 8px 18px 36px -6px rgba(234, 148, 157, 0.17);
+    overflow: hidden;
+}
+
+.images__second-img {
+    width: 184px;
+    height: 276px;
+    object-fit: cover;
+}
+
+.images__label {
+    padding: 18px 14px;
+    position: absolute;
+    left: 160px;
+    bottom: 0;
+    width: 250px;
+    height: 156px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
+}
+
+.pet-info + .pet-info {
+    margin-top: 40px;
+}
+
+.pet-block {
+    position: relative;
+}
+
+.pet-info:not(.pet-info + .pet-info) .pet-block::after {
+    position: absolute;
+    bottom: -18px;
+    content: "";
+    display: inline-block;
+    width: 222px;
+    height: 2px;
+    background: #f2f2f2;
+}
+
+.pet-block__background {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fec23f;
+    overflow: hidden;
+}
+
+.pet-block__avatar {
+    width: 40px;
+    height: 52px;
+    object-fit: cover;
+}
+
+.pet-block__body {
+    margin-left: 10px;
+}
+
+.pet-block__title {
+    color: #181e52;
+    font-family: Sora;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.pet-block__line {
+    margin-top: 6px;
+    width: 118px;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0.08;
+    background: var(--primary-color);
+}
+
+.pet-block__line--haft {
+    width: 39px;
 }
 
 .hero__info {
-    width: 44%;
+    margin-left: 82px;
+    width: 517px;
+}
+
+.hero__heading {
+    color: var(--primary-color);
+    font-family: Sora;
+    font-size: 6.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero__desc {
+    margin-top: 24px;
+    width: 391px;
+    color: #656689;
+    line-height: 1.87;
+}
+
+.hero__body-row {
+    margin-top: 38px;
+}
+
+.hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 189px;
+    height: 60px;
+    background: var(--secondary-color);
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn--round {
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.btn--arrow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fd5056;
+    border-left: none;
+    border-top: none;
+    rotate: -45deg;
+    translate: -26%;
+}
+
+.hero__schedule {
+    margin-left: 24px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration-line: underline;
 }
