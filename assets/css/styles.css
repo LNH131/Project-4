@@ -111,3 +111,35 @@ button {
     background: var(--primary-color);
     color: #fff;
 }
+
+/* Hero */
+.hero {
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.images {
+    position: relative;
+    width: 52%;
+    height: 582px;
+}
+
+.images__first-icon,
+.images__second-icon {
+    position: absolute;
+}
+
+.images__first-icon {
+    top: 16px;
+    right: 122px;
+}
+
+.hero__info {
+    width: 44%;
+}
